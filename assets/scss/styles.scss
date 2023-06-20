@@ -17,6 +17,8 @@
 
     --cards-placeholder: rgba(239, 239, 239, 0.7);
 
+    --card-hover-color: rgba(0, 0, 0, 0.6);
+
     --font-primary: #1C1B1F;
     --font-secondary: rgba(28, 27, 31, 0.8);
     --font-tertiary: rgba(28, 27, 31, 0.5);
@@ -256,15 +258,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .grid-stack-item::before {
-    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.06),
+    background: radial-gradient(1400px circle at var(--mouse-x) var(--mouse-y),
+            var(--card-hover-color),
             transparent 40%);
     z-index: -1;
 }
 
 .grid-stack-item::after {
-    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.4),
+    background: radial-gradient(1000px circle at var(--mouse-x) var(--mouse-y),
+            var(--card-hover-color),
             transparent 40%);
     z-index: -1;
 }
