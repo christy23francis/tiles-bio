@@ -230,20 +230,20 @@ input[type=number]::-webkit-outer-spin-button {
     border: var(--cards-border);
 }
 
-.gridstack-outer:hover>.grid-stack-item-content::after {
+.gridstack-outer:hover>.grid-stack-item::after {
     opacity: 1;
 }
 
-.grid-stack-item-content {
+.grid-stack-item {
     position: relative;
 }
 
-.grid-stack-item-content:hover::before {
+.grid-stack-item:hover::before {
     opacity: 1;
 }
 
-.grid-stack-item-content::before,
-.grid-stack-item-content::after {
+.grid-stack-item::before,
+.grid-stack-item::after {
     border-radius: inherit;
     content: "";
     height: 100%;
@@ -255,18 +255,18 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
 }
 
-.grid-stack-item-content::before {
+.grid-stack-item::before {
     background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
             rgba(255, 255, 255, 0.06),
             transparent 40%);
-    z-index: 3;
+    z-index: -1;
 }
 
-.grid-stack-item-content::after {
+.grid-stack-item::after {
     background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
             rgba(255, 255, 255, 0.4),
             transparent 40%);
-    z-index: 1;
+    z-index: -1;
 }
 
 .grid-stack-item-content {
