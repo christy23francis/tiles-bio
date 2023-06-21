@@ -232,20 +232,24 @@ input[type=number]::-webkit-outer-spin-button {
     border: var(--cards-border);
 }
 
-.gridstack-outer:hover>.grid-stack-item::after {
+.gridstack-outer:hover>.magic-hover-item::after {
     opacity: 1;
 }
 
-.grid-stack-item {
+#gridContainer:hover>.magic-hover-item::after {
+    opacity: 1;
+}
+
+.magic-hover-item {
     position: relative;
 }
 
-.grid-stack-item:hover::before {
+.magic-hover-item:hover::before {
     opacity: 1;
 }
 
-.grid-stack-item::before,
-.grid-stack-item::after {
+.magic-hover-item::before,
+.magic-hover-item::after {
     border-radius: inherit;
     content: "";
     height: 100%;
@@ -257,18 +261,18 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
 }
 
-.grid-stack-item::before {
+.magic-hover-item::before {
     background: radial-gradient(1400px circle at var(--mouse-x) var(--mouse-y),
             var(--card-hover-color),
             transparent 40%);
     z-index: -1;
 }
 
-.grid-stack-item.group_title::before,.grid-stack-item.group_title::after {
+.magic-hover-item.group_title::before,.magic-hover-item.group_title::after {
     background: transparent !important;
 }
 
-.grid-stack-item::after {
+.magic-hover-item::after {
     background: radial-gradient(1000px circle at var(--mouse-x) var(--mouse-y),
             var(--card-hover-color),
             transparent 40%);
