@@ -15,6 +15,15 @@
   <meta property="og:type" content="website">
   <meta property="og:description" content="Share all your product, work and social links in one place.">
   <meta property="og:image" content="https://naksossmybuywmcvqbdj.supabase.co/storage/v1/object/public/images/home/hero-bg-tab.png">
+
+  <script>
+    var currentUrl = new URL(window.location.href);
+
+    // Extract the path from the URL and remove the leading slash
+    var path = currentUrl.pathname.substring(1);
+    var ogImageTag = document.querySelector('meta[property="og:image"]');
+    ogImageTag.content = "https://naksossmybuywmcvqbdj.functions.supabase.co/og-image?username=" + encodeURIComponent(path);
+  </script>
   <meta property="og:url" content="https://tiles.bio">
 
   <!-- Twitter -->
