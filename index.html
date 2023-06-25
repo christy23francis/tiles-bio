@@ -4,6 +4,19 @@
 <head>
   <meta charset="utf-8">
   <title>Tiles - The most beautiful link in bio</title>
+  <script>
+    var currentUrl = new URL(window.location.href);
+
+    // Extract the path from the URL and remove the leading slash
+    var path = currentUrl.pathname.substring(1);
+
+    var metaTag = document.createElement('meta');
+    metaTag.setAttribute('property', 'og:image');
+    metaTag.setAttribute('content', "https://naksossmybuywmcvqbdj.functions.supabase.co/og-image?username=" + encodeURIComponent(path));
+
+    // Add the meta tag to the document head
+    document.head.appendChild(metaTag);
+  </script>
   <meta name="description"
     content="Share all your product, work and social links right inside your bio. Best link in bio for Instagram, Tiktok, Twitter.">
   <meta name="keywords"
@@ -19,20 +32,6 @@
   <meta property="og:title" content="Tiles.bio - The most beautiful link in bio">
   <meta property="og:type" content="website">
   <meta property="og:description" content="Share all your product, work and social links in one place.">
-
-  <script>
-    var currentUrl = new URL(window.location.href);
-
-    // Extract the path from the URL and remove the leading slash
-    var path = currentUrl.pathname.substring(1);
-
-    var metaTag = document.createElement('meta');
-    metaTag.setAttribute('property', 'og:image');
-    metaTag.setAttribute('content', "https://naksossmybuywmcvqbdj.functions.supabase.co/og-image?username=" + encodeURIComponent(path));
-
-    // Add the meta tag to the document head
-    document.head.appendChild(metaTag);
-  </script>
   <meta property="og:url" content="https://tiles.bio">
 
   <!-- Twitter -->
