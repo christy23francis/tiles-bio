@@ -617,6 +617,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+imagekit-javascript
+MIT
+
+imagekitio-angular
+MIT
+
 lottie-web
 MIT
 The MIT License (MIT)
